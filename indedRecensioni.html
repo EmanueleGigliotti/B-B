@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+        header{
+            color:black;
+            background-color:#88B06A;
+            padding-top: 1px;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+             color:#88B06A;
+        }
+    
+        h1 {
+            text-align: center;
+        }
+    
+        .review {
+            border: 1px solid gray;
+            margin: 10px;
+            padding: 10px;
+        }
+    
+        .rating {
+            font-weight: bold;
+        }
+    
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        input, textarea {
+            margin: 5px;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><strong><img src="/immagini/logo.png"> A NOI INTERESSA IL TUO PARERE</strong></h1>
+        <div class="container">
+            <h2>return:</h2>
+            <a href="index.html">HOME <span class="badge"></span></a><br>
+            <a href="index.html">CONTATTI<span class="badge"></span></a><br>
+            <a href="camere.html">CAMERE <span class="badge"></span></a>
+          </div>
+        <p><strong>LASCIA LA TUA RECENSIONE:</strong></p>
+    </header>
+    <main>
+        <form action="save_review.php" method="post">
+            <input type="text" name="name" placeholder="Il tuo nome" required>
+            <input type="text" name="cognome" placeholder="Il tuo cognome" required>
+            <input type="email" name="email" placeholder="la tua email" required>
+            <input type="text" name="data" placeholder="data oggi" required>
+
+            <p style="color:black">DACCI UN VOTO</p>
+            <input type="radio" id="a" name="voto" value="a">
+            <label for="uno">1</label><br>
+            <input type="radio" id="b" name="voto" value="b">
+            <label for="due">2</label><br>
+            <input type="radio" id="c" name="voto" value="c">
+            <label for="tre">3</label><br>
+            <input type="radio" id="c" name="voto" value="c">
+            <label for="quattro">4</label><br>
+            <input type="radio" id="c" name="voto" value="c">
+            <label for="cinque">5</label><br>
+            <p style="color:black">LASCIA UN COMMENTO</p>
+            <textarea name="comment" rows="5" cols="40" placeholder="Il tuo commento" required></textarea>
+            <input type="submit" value="Invia">
+            
+        </form>
+    </main>
+</body>
+</html>
